@@ -18,12 +18,14 @@ body {
   color: white;
 }
 
+
 section {
   margin-top: 80px;
-  height: 500px;
-  padding: 10rem 2rem;
-  margin-left: 100px;
+  min-height: 100vh;
+  padding: 8rem 5%;
+  margin-left: 0;
 }
+
 
 .hidden{
     opacity:0;
@@ -56,6 +58,13 @@ header.sticky{
 
 }
 
+@media(max-width:768px){
+  .header{
+    gap:0;
+    justify-content:space-between;
+    padding:2rem 5%;
+  }
+}
 .subtitle {
   font-size: 1.2rem;
   font-weight: 500;
@@ -147,7 +156,8 @@ span {
 }
 
 .home-content p {
-  width: 500px;
+  max-width: 500px;
+  width:100%;
   font-size: 1.6rem;
 }
 
@@ -212,7 +222,7 @@ span {
   background: #0f172a;
   color: white;
   margin-right: 50px;
-  margin-top: 400px;
+  
 }
 
 .about-img img {
@@ -434,7 +444,7 @@ span {
 }
 
 .projects {
-  margin-top: 350px;
+  margin-top: 5rem;
 }
 
 .projects h5 {
@@ -642,9 +652,7 @@ span {
   background-color: #ddd;
 }
 
-#contact {
-  margin-top: 130rem;
-}
+
 
 .contact h5 {
   text-align: center;
@@ -942,4 +950,80 @@ span {
   margin-left: 40px;
   background-color: #ddd;
   margin-bottom: 40px;
+}
+
+
+@media(max-width:768px){
+
+  html{
+    font-size:55%;
+  }
+
+  section{
+    margin-left:0;
+    padding:8rem 5%;
+    min-height:auto;
+    height:auto;
+  }
+
+  .home{
+    flex-direction:column-reverse;
+    text-align:center;
+    gap:4rem;
+  }
+
+  .home-content{
+    width:100%;
+    align-items:center;
+  }
+
+  .home-content p{
+    width:100%;
+  }
+
+  .home-img img{
+    width:75vw;
+    height:auto;
+    max-width:300px;
+  }
+
+  .about{
+    flex-direction:column;
+    text-align:center;
+    gap:3rem;
+    margin-top:0;
+    margin-right:0;
+  }
+
+  .about-img img{
+    width:80vw;
+    height:auto;
+    max-width:300px;
+  }
+
+  .about-content h2{
+    text-align:center;
+  }
+
+  .education{
+    flex-direction:column;
+  }
+
+  .project-card,
+  .project-card:nth-child(even){
+    flex-direction:column;
+  }
+
+  .project-image img{
+    max-width:100%;
+  }
+
+  .contact-container{
+    grid-template-columns:1fr;
+  }
+
+  .contact form{
+    width:100%;
+    height:auto;
+  }
 }
