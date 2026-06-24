@@ -185,7 +185,7 @@ span {
 
 .btn {
   display: inline-block;
-  padding: 1.2rem 2.4rem;
+  padding: 1.2rem 2.5rem;
   background: #b46bac;
   color: black;
   border-radius: 50px;
@@ -970,6 +970,7 @@ span {
     flex-direction:column-reverse;
     text-align:center;
     gap:4rem;
+    padding-top:12rem;
   }
 
   .home-content{
@@ -977,14 +978,18 @@ span {
     align-items:center;
   }
 
+  .home-content h1{
+    font-size: 4.5rem;
+  }
+
   .home-content p{
     width:100%;
   }
 
   .home-img img{
-    width:75vw;
-    height:auto;
-    max-width:300px;
+    width: 250px;
+    height:250px;
+    object-fit:cover;
   }
 
   .about{
