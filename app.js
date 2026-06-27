@@ -36,3 +36,50 @@ const header = document.querySelector("header");
 window.addEventListener("scroll", () => {
     header.classList.toggle("sticky", window.scrollY > 80);
 });
+
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+
+menuIcon.onclick = () => {
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+};
+
+document.querySelectorAll('.navbar a').forEach(link => {
+    link.addEventListener('click', () => {
+        menuIcon.classList.remove('bx-x');
+        navbar.classList.remove('active');
+    });
+});
+
+const code = `const developer = {
+    name: "Shruti Dubey",
+    role: "Frontend Developer",
+    skills: [
+        "HTML",
+        "CSS",
+        "JavaScript"
+    ],
+    learning: "DSA",
+    status: "Open to Internship"
+};`;
+
+const typing = document.getElementById("typing");
+
+let index = 0;
+
+function typeCode(){
+
+    if(index < code.length){
+
+        typing.textContent += code.charAt(index);
+
+        index++;
+
+        setTimeout(typeCode,40);
+
+    }
+
+}
+
+window.addEventListener("load",typeCode);
